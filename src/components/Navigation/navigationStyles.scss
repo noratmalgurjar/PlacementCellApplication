@@ -1,0 +1,46 @@
+// Importing varaibles.scss.
+@import './../../styles/variables.scss';
+
+.brand-logo{
+    animation: brand-logo-spin infinite 10s linear;
+}
+@keyframes brand-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.common-navbar-container{
+    .common-navbar-brand, .common-navbar-collapse > .navbar-nav > .nav-link{
+        color:$navbarBrandname !important;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        font-size: $navbarItem;
+        span{
+            vertical-align: middle;
+        }
+    }
+
+    .navbar-nav > .nav-link{
+        &.nav-link-right{
+            padding: .5rem .5rem !important;
+        }
+        padding:0.625rem 1.25rem !important;
+        &.active, &.active:hover{
+            color:$navbarLinkOnHover !important;
+            svg .todo-icon, svg .store-icon{
+                fill: $navbarLinkOnHover !important;
+            }
+        }
+        &:hover{
+            color:$navbarLinkOnHover !important;
+        }
+        &:hover {
+            svg .todo-icon,  svg .store-icon{
+                fill: $navbarLinkOnHover !important;
+            }
+        }
+
+    }
+}
